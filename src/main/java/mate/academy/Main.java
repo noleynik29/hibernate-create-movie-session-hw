@@ -38,6 +38,6 @@ public class Main {
                 .getInstance(MovieSessionService.class);
         movieSessionService.add(movieSession);
         System.out.println(movieSessionService.get(movieSession.getId()));
-        movieSessionService.findAvailableSessions(fastAndFurious.getId(), LocalDate.now());
+        movieSessionService.findAvailableSessions(fastAndFurious.getId(), LocalDate.now()).forEach(System.out::println);
     }
 }
