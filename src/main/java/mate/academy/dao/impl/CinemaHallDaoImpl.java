@@ -2,12 +2,12 @@ package mate.academy.dao.impl;
 
 import java.util.List;
 import java.util.Optional;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 import mate.academy.dao.CinemaHallDao;
 import mate.academy.exception.DataProcessingException;
 import mate.academy.model.CinemaHall;
 import mate.academy.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class CinemaHallDaoImpl implements CinemaHallDao {
     @Override
