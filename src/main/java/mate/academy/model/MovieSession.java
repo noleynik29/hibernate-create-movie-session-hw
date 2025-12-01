@@ -57,11 +57,11 @@ public class MovieSession {
 
     @Override
     public String toString() {
-        return "MovieSession{" +
-                "id=" + id +
-                ", showTime=" + showTime +
-                ", movie=" + movie +
-                ", cinemaHall=" + cinemaHall +
-                '}';
+        return "MovieSession{"
+                + "id=" + id
+                + ", showTime=" + showTime
+                + ", movie=" + movie
+                + ", cinemaHall=" + cinemaHall
+                + '}';
     }
 }

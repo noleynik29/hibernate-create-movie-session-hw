@@ -4,11 +4,10 @@ import mate.academy.dao.CinemaHallDao;
 import mate.academy.exception.DataProcessingException;
 import mate.academy.model.CinemaHall;
 import mate.academy.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
 import java.util.List;
 import java.util.Optional;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 public class CinemaHallDaoImpl implements CinemaHallDao {
     @Override
@@ -49,7 +48,8 @@ public class CinemaHallDaoImpl implements CinemaHallDao {
         try {
             session = HibernateUtil.getSessionFactory().openSession();
             transaction = session.beginTransaction();
-            List<CinemaHall> cinemaHalls = session.createQuery("FROM CinemaHall ", CinemaHall.class).list();
+            List<CinemaHall> cinemaHalls = session.createQuery("FROM CinemaHall ",
+                    CinemaHall.class).list();
             transaction.commit();
             return cinemaHalls;
         } catch (Exception e) {
