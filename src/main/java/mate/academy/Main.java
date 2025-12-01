@@ -30,12 +30,12 @@ public class Main {
         System.out.println(cinemaHallService.get(cinemaHall.getId()));
         cinemaHallService.getAll().forEach(System.out::println);
 
-        MovieSessionService movieSessionService = (MovieSessionService) injector
-                .getInstance(MovieSessionService.class);
         MovieSession movieSession = new MovieSession();
         movieSession.setMovie(fastAndFurious);
         movieSession.setCinemaHall(cinemaHall);
         movieSession.setShowTime(LocalDateTime.now());
+        MovieSessionService movieSessionService = (MovieSessionService) injector
+                .getInstance(MovieSessionService.class);
         movieSessionService.add(movieSession);
         System.out.println(movieSessionService.get(movieSession.getId()));
         movieSessionService.findAvailableSessions(fastAndFurious.getId(), LocalDate.now());

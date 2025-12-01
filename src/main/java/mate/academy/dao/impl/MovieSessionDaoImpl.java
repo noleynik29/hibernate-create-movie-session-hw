@@ -1,17 +1,15 @@
 package mate.academy.dao.impl;
 
-import mate.academy.dao.MovieSessionDao;
-import mate.academy.exception.DataProcessingException;
-import mate.academy.model.Movie;
-import mate.academy.model.MovieSession;
-import mate.academy.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import mate.academy.dao.MovieSessionDao;
+import mate.academy.exception.DataProcessingException;
+import mate.academy.model.MovieSession;
+import mate.academy.util.HibernateUtil;
 
 public class MovieSessionDaoImpl implements MovieSessionDao {
     @Override
